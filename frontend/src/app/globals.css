@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-600: #16a34a;
+  --color-primary-700: #15803d;
+  --color-primary-800: #166534;
+  --color-primary-900: #14532d;
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  /* Soft Off-White Surface / Warm neutral */
+  --background: #FAFAF9;
+  /* Charcoal text */
+  --foreground: #1C1917;
+
+  /* Card */
+  --card: #FFFFFF;
+  --card-foreground: #1C1917;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #1C1917;
+
+  /* Muted deeper greens */
+  --primary: #1F4432;
+  --primary-foreground: #F8FAFC;
+
+  /* Warm neutrals */
+  --secondary: #E7E5E4;
+  --secondary-foreground: #292524;
+
+  --muted: #F5F5F4;
+  --muted-foreground: #78716C;
+
+  --accent: #EFEFEF;
+  --accent-foreground: #1C1917;
+
+  --destructive: #7F1D1D;
+  --destructive-foreground: #FEF2F2;
+
+  --border: #E7E5E4;
+  --input: #E7E5E4;
+  --ring: #1F4432;
+
+  --radius: 0.75rem;
+
+  /* Fonts */
+  --font-inter: "Inter", sans-serif;
+}
+
+.dark {
+  --background: #1C1917;
+  --foreground: #FAFAF9;
+  
+  --card: #292524;
+  --card-foreground: #FAFAF9;
+  
+  --popover: #292524;
+  --popover-foreground: #FAFAF9;
+  
+  --primary: #4ADE80;
+  --primary-foreground: #1F4432;
+  
+  --secondary: #44403C;
+  --secondary-foreground: #FAFAF9;
+  
+  --muted: #44403C;
+  --muted-foreground: #A8A29E;
+  
+  --accent: #44403C;
+  --accent-foreground: #FAFAF9;
+  
+  --destructive: #7F1D1D;
+  --destructive-foreground: #FEF2F2;
+  
+  --border: #44403C;
+  --input: #44403C;
+  --ring: #D6D3D1;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply antialiased;
+  }
+}

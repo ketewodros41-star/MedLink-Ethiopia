@@ -1,0 +1,20 @@
+# Medplum platform source - third-party, do not commit
+medplum-main/
+
+# Python virtual envs and databases
+.venv/
+medlink-fastapi/.venv/
+*.db
+medlink-fastapi/__pycache__/
+medlink-fastapi/**/__pycache__/
+medlink-fastapi/**/*.pyc
+medlink-fastapi/.pytest_cache/
+storage/
+
+# Frontend
+frontend/.next/
+frontend/node_modules/
+
+# Env files
+medlink-fastapi/.env
+.env
